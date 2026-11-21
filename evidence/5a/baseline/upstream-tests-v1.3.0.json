@@ -1,0 +1,1434 @@
+{
+  "numTotalTestSuites": 14,
+  "numPassedTestSuites": 14,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 134,
+  "numPassedTests": 134,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1795275307670,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) liefert den V2-Kill-Switch-Zustand ausschließlich an den Host",
+          "status": "passed",
+          "title": "liefert den V2-Kill-Switch-Zustand ausschließlich an den Host",
+          "duration": 3.449299999999994,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) lehnt qa.summaryRuntime ohne Host-Token ab",
+          "status": "passed",
+          "title": "lehnt qa.summaryRuntime ohne Host-Token ab",
+          "duration": 0.6972000000000662,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) startet bewusst den V2-Kontextpfad und liefert quellengebunden aus",
+          "status": "passed",
+          "title": "startet bewusst den V2-Kontextpfad und liefert quellengebunden aus",
+          "duration": 11.767699999999877,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) liefert dem Host exakt denselben sicheren gepackten Kontext",
+          "status": "passed",
+          "title": "liefert dem Host exakt denselben sicheren gepackten Kontext",
+          "duration": 1.5271000000000186,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) lehnt qa.summaryContextPreview ohne Host-Token ab",
+          "status": "passed",
+          "title": "lehnt qa.summaryContextPreview ohne Host-Token ab",
+          "duration": 0.5951999999999771,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) lehnt qa.requestSummary ohne Host-Token ab",
+          "status": "passed",
+          "title": "lehnt qa.requestSummary ohne Host-Token ab",
+          "duration": 0.4395999999999276,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa summary V2 (issue #456 slice 7)"],
+          "fullName": "qa summary V2 (issue #456 slice 7) lehnt den bewussten Auftrag ab wenn der Produkt-Kill-Switch aus ist",
+          "status": "passed",
+          "title": "lehnt den bewussten Auftrag ab wenn der Produkt-Kill-Switch aus ist",
+          "duration": 0.33750000000009095,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275309369,
+      "endTime": 1795275309387.4397,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/qa.summary.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert sichtbare Fragen für einen Teilnehmer inklusive Upvote-Status",
+          "status": "passed",
+          "title": "liefert sichtbare Fragen für einen Teilnehmer inklusive Upvote-Status",
+          "duration": 9.26520000000005,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) teilt dieselbe öffentliche Q&A-Seite nach Revision zwischen Teilnahmen",
+          "status": "passed",
+          "title": "teilt dieselbe öffentliche Q&A-Seite nach Revision zwischen Teilnahmen",
+          "duration": 2.2977999999998246,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) gibt fremde PENDING-Fragen nicht über den gemeinsamen Seiten-Cache preis",
+          "status": "passed",
+          "title": "gibt fremde PENDING-Fragen nicht über den gemeinsamen Seiten-Cache preis",
+          "duration": 2.9774999999999636,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) behandelt einen fehlgeschlagenen geteilten Q&A-Abruf ohne unbehandelte Rejection",
+          "status": "passed",
+          "title": "behandelt einen fehlgeschlagenen geteilten Q&A-Abruf ohne unbehandelte Rejection",
+          "duration": 7.275899999999865,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert die Teilnehmer-Q&A-Liste nach BEST ohne Host-Metriken auszugeben",
+          "status": "passed",
+          "title": "sortiert die Teilnehmer-Q&A-Liste nach BEST ohne Host-Metriken auszugeben",
+          "duration": 1.1893999999999778,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert die Teilnehmer-Q&A-Liste nach CONTROVERSIAL",
+          "status": "passed",
+          "title": "sortiert die Teilnehmer-Q&A-Liste nach CONTROVERSIAL",
+          "duration": 0.682399999999916,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert die Teilnehmer-Q&A-Liste nach TIME in der Datenbank",
+          "status": "passed",
+          "title": "sortiert die Teilnehmer-Q&A-Liste nach TIME in der Datenbank",
+          "duration": 0.5797000000000025,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) bündelt gleichzeitige Teilnehmer-Rankings derselben Revision und lädt eigene Votes separat",
+          "status": "passed",
+          "title": "bündelt gleichzeitige Teilnehmer-Rankings derselben Revision und lädt eigene Votes separat",
+          "duration": 64.44460000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) weist participant-authentifizierte Q&A-Lesezugriffe ohne Participant-ID ab",
+          "status": "passed",
+          "title": "weist participant-authentifizierte Q&A-Lesezugriffe ohne Participant-ID ab",
+          "duration": 0.5739000000000942,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert der expliziten öffentlichen Presenter-Projektion nur freigegebene Fragen",
+          "status": "passed",
+          "title": "liefert der expliziten öffentlichen Presenter-Projektion nur freigegebene Fragen",
+          "duration": 1.100099999999884,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) übernimmt die vom Host publizierte Sortierung in der Presenter-Projektion",
+          "status": "passed",
+          "title": "übernimmt die vom Host publizierte Sortierung in der Presenter-Projektion",
+          "duration": 0.8260000000000218,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) übernimmt Suche und Pin-Filter in der Presenter-Projektion",
+          "status": "passed",
+          "title": "übernimmt Suche und Pin-Filter in der Presenter-Projektion",
+          "duration": 0.9601000000000113,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lädt in der Presenter-Projektion bis zu 500 ACTIVE+PINNED statt nur der Forum-Defaultseite",
+          "status": "passed",
+          "title": "lädt in der Presenter-Projektion bis zu 500 ACTIVE+PINNED statt nur der Forum-Defaultseite",
+          "duration": 2.6043999999999414,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) speichert die Host-Q&A-Sortierung für die Presenter-Projektion",
+          "status": "passed",
+          "title": "speichert die Host-Q&A-Sortierung für die Presenter-Projektion",
+          "duration": 0.4513999999999214,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt Presenter-Sortierung für beendete Sessions ab",
+          "status": "passed",
+          "title": "lehnt Presenter-Sortierung für beendete Sessions ab",
+          "duration": 0.2807999999999993,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert der Presenter-Projektion freigegebene Fragen auch bei geschlossenem Beitragskanal",
+          "status": "passed",
+          "title": "liefert der Presenter-Projektion freigegebene Fragen auch bei geschlossenem Beitragskanal",
+          "duration": 0.3023000000000593,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) weist die öffentliche Presenter-Projektion für eine unbekannte Session zurück",
+          "status": "passed",
+          "title": "weist die öffentliche Presenter-Projektion für eine unbekannte Session zurück",
+          "duration": 0.18230000000016844,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert Teilnehmenden nach globalem Sessionende keine Q&A-Inhalte",
+          "status": "passed",
+          "title": "liefert Teilnehmenden nach globalem Sessionende keine Q&A-Inhalte",
+          "duration": 0.35649999999986903,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert Teilnehmenden nach Quiz-FINISHED bestehende Fragen, solange Q&A offen ist",
+          "status": "passed",
+          "title": "liefert Teilnehmenden nach Quiz-FINISHED bestehende Fragen, solange Q&A offen ist",
+          "duration": 0.69399999999996,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) beendet Teilnehmer-Q&A nach Quiz-FINISHED wenn der Kanal geschlossen oder abgelaufen ist",
+          "status": "passed",
+          "title": "beendet Teilnehmer-Q&A nach Quiz-FINISHED wenn der Kanal geschlossen oder abgelaufen ist",
+          "duration": 0.39850000000001273,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert der Presenter-Projektion nach Quiz-FINISHED offene Q&A-Fragen",
+          "status": "passed",
+          "title": "liefert der Presenter-Projektion nach Quiz-FINISHED offene Q&A-Fragen",
+          "duration": 0.29950000000008004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) begrenzt pageSize auf 500 und liefert einen fortsetzbaren nextCursor",
+          "status": "passed",
+          "title": "begrenzt pageSize auf 500 und liefert einen fortsetzbaren nextCursor",
+          "duration": 8.710600000000113,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt eine Folgeseite nach Änderung der Rankingrevision ab",
+          "status": "passed",
+          "title": "lehnt eine Folgeseite nach Änderung der Rankingrevision ab",
+          "duration": 0.555599999999913,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) legt eine neue Frage an und setzt ohne Moderation den Status ACTIVE",
+          "status": "passed",
+          "title": "legt eine neue Frage an und setzt ohne Moderation den Status ACTIVE",
+          "duration": 2.446100000000115,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt neue Fragen ab, wenn die Session beendet ist",
+          "status": "passed",
+          "title": "lehnt neue Fragen ab, wenn die Session beendet ist",
+          "duration": 0.3912000000000262,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) begrenzt Studierende auf maximal 10 Fragen pro Session",
+          "status": "passed",
+          "title": "begrenzt Studierende auf maximal 10 Fragen pro Session",
+          "duration": 0.376700000000028,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) zählt einen idempotenten Submit-Replay weder im Teilnehmer- noch im Sessionkontingent doppelt",
+          "status": "passed",
+          "title": "zählt einen idempotenten Submit-Replay weder im Teilnehmer- noch im Sessionkontingent doppelt",
+          "duration": 0.7837000000001808,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) begrenzt eine Session atomar auf 25.000 Fragen",
+          "status": "passed",
+          "title": "begrenzt eine Session atomar auf 25.000 Fragen",
+          "duration": 0.31150000000002365,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) togglet Upvotes pro Teilnehmer und Frage",
+          "status": "passed",
+          "title": "togglet Upvotes pro Teilnehmer und Frage",
+          "duration": 0.557399999999916,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) moderiert Fragen und erlaubt mehrfaches Pinnen",
+          "status": "passed",
+          "title": "moderiert Fragen und erlaubt mehrfaches Pinnen",
+          "duration": 0.5797999999999774,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) löscht Fragen bei Host-Moderation physisch aus PostgreSQL",
+          "status": "passed",
+          "title": "löscht Fragen bei Host-Moderation physisch aus PostgreSQL",
+          "duration": 1.378500000000031,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) moderiert nach Quiz-FINISHED, solange Q&A offen ist",
+          "status": "passed",
+          "title": "moderiert nach Quiz-FINISHED, solange Q&A offen ist",
+          "duration": 0.26350000000002183,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt Host-Moderation nach Quiz-FINISHED ab, wenn Q&A geschlossen ist",
+          "status": "passed",
+          "title": "lehnt Host-Moderation nach Quiz-FINISHED ab, wenn Q&A geschlossen ist",
+          "duration": 0.2859000000000833,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) schwärzt mehrere disjunkte Passagen atomar und setzt das Label",
+          "status": "passed",
+          "title": "schwärzt mehrere disjunkte Passagen atomar und setzt das Label",
+          "duration": 1.182299999999941,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) erlaubt zweite Schwärzung bei längenerhaltenden Blockzeichen",
+          "status": "passed",
+          "title": "erlaubt zweite Schwärzung bei längenerhaltenden Blockzeichen",
+          "duration": 0.5734999999999673,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt Schwärzung bei veralteter Textversion und Überlappung ab",
+          "status": "passed",
+          "title": "lehnt Schwärzung bei veralteter Textversion und Überlappung ab",
+          "duration": 0.501399999999876,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt Schwärzung ohne gültigen Host-Token ab",
+          "status": "passed",
+          "title": "lehnt Schwärzung ohne gültigen Host-Token ab",
+          "duration": 0.18389999999999418,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt Moderation ohne gültigen Host-Token ab",
+          "status": "passed",
+          "title": "lehnt Moderation ohne gültigen Host-Token ab",
+          "duration": 0.15789999999992688,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) schaltet Q&A-Moderation mit Host-Rechten um",
+          "status": "passed",
+          "title": "schaltet Q&A-Moderation mit Host-Rechten um",
+          "duration": 0.36219999999980246,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) deaktiviert die Vorab-Moderation ohne wartende Fragen vorzeitig freizugeben",
+          "status": "passed",
+          "title": "deaktiviert die Vorab-Moderation ohne wartende Fragen vorzeitig freizugeben",
+          "duration": 0.4775999999999385,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert Anzahl und Fingerprint des aktuellen Pending-Bestands",
+          "status": "passed",
+          "title": "liefert Anzahl und Fingerprint des aktuellen Pending-Bestands",
+          "duration": 0.4862000000000535,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt den Pending-Fingerprint ohne gültigen Host-Token ab",
+          "status": "passed",
+          "title": "lehnt den Pending-Fingerprint ohne gültigen Host-Token ab",
+          "duration": 0.21730000000002292,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) gibt denselben Pending-Bestand trotz zwischenzeitlicher Votes gesammelt frei",
+          "status": "passed",
+          "title": "gibt denselben Pending-Bestand trotz zwischenzeitlicher Votes gesammelt frei",
+          "duration": 0.5045000000000073,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) verlangt nach einer Änderung des Pending-Stands eine neue Bestätigung",
+          "status": "passed",
+          "title": "verlangt nach einer Änderung des Pending-Stands eine neue Bestätigung",
+          "duration": 0.37229999999999563,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) verhindert die Sammelfreigabe bei aktiver Vorab-Moderation",
+          "status": "passed",
+          "title": "verhindert die Sammelfreigabe bei aktiver Vorab-Moderation",
+          "duration": 0.2563999999999851,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) bricht die Sammelfreigabe ab wenn Q&A nach der Vorprüfung geschlossen wurde",
+          "status": "passed",
+          "title": "bricht die Sammelfreigabe ab wenn Q&A nach der Vorprüfung geschlossen wurde",
+          "duration": 0.248299999999972,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt die Sammelfreigabe ohne gültigen Host-Token ab",
+          "status": "passed",
+          "title": "lehnt die Sammelfreigabe ohne gültigen Host-Token ab",
+          "duration": 0.2157999999999447,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt qa.list mit moderatorView ohne Host-Token ab",
+          "status": "passed",
+          "title": "lehnt qa.list mit moderatorView ohne Host-Token ab",
+          "duration": 0.3029999999998836,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert qa.list mit moderatorView bei gültigem Host-Token",
+          "status": "passed",
+          "title": "liefert qa.list mit moderatorView bei gültigem Host-Token",
+          "duration": 0.5705000000000382,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) stellt PENDING im Host-Ranking vor ACTIVE und liefert seitenunabhängigen pendingCount",
+          "status": "passed",
+          "title": "stellt PENDING im Host-Ranking vor ACTIVE und liefert seitenunabhängigen pendingCount",
+          "duration": 0.5452000000000226,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert neben dem gefilterten auch den sitzungsweiten Pending-Zähler",
+          "status": "passed",
+          "title": "liefert neben dem gefilterten auch den sitzungsweiten Pending-Zähler",
+          "duration": 0.5367000000001099,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) teilt forumVisibleCount revisionsgebunden zwischen parallelen Teilnehmerabrufen",
+          "status": "passed",
+          "title": "teilt forumVisibleCount revisionsgebunden zwischen parallelen Teilnehmerabrufen",
+          "duration": 0.4658999999999196,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) ordnet Host-TOP und Host-BEST PINNED vor PENDING und ACTIVE",
+          "status": "passed",
+          "title": "ordnet Host-TOP und Host-BEST PINNED vor PENDING und ACTIVE",
+          "duration": 0.5943999999999505,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert einem autorisierten Host beendete Q&A-Inhalte innerhalb der 336h nur lesend",
+          "status": "passed",
+          "title": "liefert einem autorisierten Host beendete Q&A-Inhalte innerhalb der 336h nur lesend",
+          "duration": 0.42089999999984684,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert nach 336h trotz technischer Legal-Hold-Speicherung keine Host-Q&A-Inhalte",
+          "status": "passed",
+          "title": "liefert nach 336h trotz technischer Legal-Hold-Speicherung keine Host-Q&A-Inhalte",
+          "duration": 0.32349999999996726,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert im Host-Q&A fuer Kindergarten-Sessions den Autor-Nickname fuer Tier-Badges",
+          "status": "passed",
+          "title": "liefert im Host-Q&A fuer Kindergarten-Sessions den Autor-Nickname fuer Tier-Badges",
+          "duration": 0.4354000000000724,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) filtert Host-Q&A nach Autor-Nickname in der Datenbank",
+          "status": "passed",
+          "title": "filtert Host-Q&A nach Autor-Nickname in der Datenbank",
+          "duration": 0.40820000000007894,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) ignoriert authorNickname in der Teilnehmer-Q&A-Liste",
+          "status": "passed",
+          "title": "ignoriert authorNickname in der Teilnehmer-Q&A-Liste",
+          "duration": 0.3267000000000735,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) verwendet bei deaktivierter Moderation mit wartenden Fragen den sichtbaren DB-Zähler",
+          "status": "passed",
+          "title": "verwendet bei deaktivierter Moderation mit wartenden Fragen den sichtbaren DB-Zähler",
+          "duration": 0.31730000000015934,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert in der Teilnehmer-Q&A-Liste Autor und Team an den Fragen",
+          "status": "passed",
+          "title": "liefert in der Teilnehmer-Q&A-Liste Autor und Team an den Fragen",
+          "duration": 0.3425999999999476,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) laesst Autor und Team im anonymen Modus auch bei gesetzten Rohfeldern weg",
+          "status": "passed",
+          "title": "laesst Autor und Team im anonymen Modus auch bei gesetzten Rohfeldern weg",
+          "duration": 0.7913999999998396,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert Host-Q&A im BEST-Modus nach Wilson-Score",
+          "status": "passed",
+          "title": "sortiert Host-Q&A im BEST-Modus nach Wilson-Score",
+          "duration": 0.555599999999913,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert Kontroversität im Host-BEST-Modus, damit der Kompass nicht von der Sortierung abhängt",
+          "status": "passed",
+          "title": "liefert Kontroversität im Host-BEST-Modus, damit der Kompass nicht von der Sortierung abhängt",
+          "duration": 0.32910000000015316,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert Kontroversität im Host-TOP- und TIME-Modus, damit der Kompass nicht von der Sortierung abhängt",
+          "status": "passed",
+          "title": "liefert Kontroversität im Host-TOP- und TIME-Modus, damit der Kompass nicht von der Sortierung abhängt",
+          "duration": 0.5398999999999887,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert CONTROVERSIAL auch unterhalb von T und zeigt das Label erst ab T",
+          "status": "passed",
+          "title": "sortiert CONTROVERSIAL auch unterhalb von T und zeigt das Label erst ab T",
+          "duration": 0.4102999999997792,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert Host-Q&A im CONTROVERSIAL-Modus nach Kontroversität und kennzeichnet starke Polarität",
+          "status": "passed",
+          "title": "sortiert Host-Q&A im CONTROVERSIAL-Modus nach Kontroversität und kennzeichnet starke Polarität",
+          "duration": 0.45080000000007203,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) sortiert im Host-CONTROVERSIAL-Modus die kontroverseste Frage vor weniger kontroversen angehefteten Fragen",
+          "status": "passed",
+          "title": "sortiert im Host-CONTROVERSIAL-Modus die kontroverseste Frage vor weniger kontroversen angehefteten Fragen",
+          "duration": 0.337099999999964,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt qa.onQuestionsUpdated mit moderatorView ohne Host-Token ab",
+          "status": "passed",
+          "title": "lehnt qa.onQuestionsUpdated mit moderatorView ohne Host-Token ab",
+          "duration": 0.5025000000000546,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) beendet die Teilnehmer-Subscription nach globalem Sessionende inhaltsfrei",
+          "status": "passed",
+          "title": "beendet die Teilnehmer-Subscription nach globalem Sessionende inhaltsfrei",
+          "duration": 0.7467999999998938,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) haelt die Teilnehmer-Subscription nach Quiz-FINISHED offen, solange Q&A offen ist",
+          "status": "passed",
+          "title": "haelt die Teilnehmer-Subscription nach Quiz-FINISHED offen, solange Q&A offen ist",
+          "duration": 0.3046000000001641,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert qa.onQuestionsUpdated als inhaltslose Host-Invalidierung",
+          "status": "passed",
+          "title": "liefert qa.onQuestionsUpdated als inhaltslose Host-Invalidierung",
+          "duration": 0.332300000000032,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) meldet Hosts einen geänderten Moderationsmodus auch ohne neue Ranking-Revision",
+          "status": "passed",
+          "title": "meldet Hosts einen geänderten Moderationsmodus auch ohne neue Ranking-Revision",
+          "duration": 0.571100000000115,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) weckt qa.onQuestionsUpdated bei Ranking-Signal statt im Sekundentakt",
+          "status": "passed",
+          "title": "weckt qa.onQuestionsUpdated bei Ranking-Signal statt im Sekundentakt",
+          "duration": 0.3969999999999345,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) wendet den Fristablauf einmal an und fällt danach auf das normale Teilnehmerintervall zurück",
+          "status": "passed",
+          "title": "wendet den Fristablauf einmal an und fällt danach auf das normale Teilnehmerintervall zurück",
+          "duration": 6.91190000000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) macht eine Fristverlängerung nach dem Ablauf wieder sofort sichtbar",
+          "status": "passed",
+          "title": "macht eine Fristverlängerung nach dem Ablauf wieder sofort sichtbar",
+          "duration": 0.7346000000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) räumt Listener und Timer beim Unsubscribe der Q&A-Subscription auf",
+          "status": "passed",
+          "title": "räumt Listener und Timer beim Unsubscribe der Q&A-Subscription auf",
+          "duration": 0.3925000000001546,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) ignoriert die Teilnehmerfrist für den Host-Wartetakt",
+          "status": "passed",
+          "title": "ignoriert die Teilnehmerfrist für den Host-Wartetakt",
+          "duration": 1.0821000000000822,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) beendet qa.onQuestionsUpdated nach Widerruf des Host-Tokens",
+          "status": "passed",
+          "title": "beendet qa.onQuestionsUpdated nach Widerruf des Host-Tokens",
+          "duration": 0.27340000000003783,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert für Teilnehmende keine Q&A-Inhalte, wenn der Kanal geschlossen ist",
+          "status": "passed",
+          "title": "liefert für Teilnehmende keine Q&A-Inhalte, wenn der Kanal geschlossen ist",
+          "duration": 0.2315000000000964,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) lehnt neue Fragen ab, wenn der Q&A-Kanal geschlossen ist",
+          "status": "passed",
+          "title": "lehnt neue Fragen ab, wenn der Q&A-Kanal geschlossen ist",
+          "duration": 0.25909999999998945,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) markiert die eigene Frage bei geöffnetem Q&A-Kanal als gelöscht",
+          "status": "passed",
+          "title": "markiert die eigene Frage bei geöffnetem Q&A-Kanal als gelöscht",
+          "duration": 0.5924999999999727,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) verhindert das Löschen einer fremden Q&A-Frage",
+          "status": "passed",
+          "title": "verhindert das Löschen einer fremden Q&A-Frage",
+          "duration": 0.19689999999991414,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) liefert Downvote und gewichteten Zähler atomar aus der Datenbankfunktion",
+          "status": "passed",
+          "title": "liefert Downvote und gewichteten Zähler atomar aus der Datenbankfunktion",
+          "duration": 0.6096000000000004,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qa router (Epic 8)"],
+          "fullName": "qa router (Epic 8) verhindert die Bewertung der eigenen Q&A-Frage",
+          "status": "passed",
+          "title": "verhindert die Bewertung der eigenen Q&A-Frage",
+          "duration": 0.2555999999999585,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "lehnt eine nicht vorhandene Frage mit gueltigem Upvote-Input ab",
+          "status": "passed",
+          "title": "lehnt eine nicht vorhandene Frage mit gueltigem Upvote-Input ab",
+          "duration": 0.20299999999997453,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": [],
+          "fullName": "qa.toggleModeration weist ungültige Host-Token ab",
+          "status": "passed",
+          "title": "qa.toggleModeration weist ungültige Host-Token ab",
+          "duration": 0.12630000000012842,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275309343,
+      "endTime": 1795275309487.2556,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/qa.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["quiz learning-objective derivation capability boundary"],
+          "fullName": "quiz learning-objective derivation capability boundary issues a bound derivation bearer after the shared-NAT rate check",
+          "status": "passed",
+          "title": "issues a bound derivation bearer after the shared-NAT rate check",
+          "duration": 5.713199999999915,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["quiz learning-objective derivation capability boundary"],
+          "fullName": "quiz learning-objective derivation capability boundary rejects derivation preparation when its global budget is exhausted",
+          "status": "passed",
+          "title": "rejects derivation preparation when its global budget is exhausted",
+          "duration": 2.2630000000001473,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["quiz learning-objective derivation capability boundary"],
+          "fullName": "quiz learning-objective derivation capability boundary rejects missing or replayed derivation authorization before model work",
+          "status": "passed",
+          "title": "rejects missing or replayed derivation authorization before model work",
+          "duration": 1.9678999999998723,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["quiz learning-objective derivation capability boundary"],
+          "fullName": "quiz learning-objective derivation capability boundary returns an authorized busy result and finalizes the one-shot capability",
+          "status": "passed",
+          "title": "returns an authorized busy result and finalizes the one-shot capability",
+          "duration": 1.8010999999999058,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["quiz learning-objective derivation capability boundary"],
+          "fullName": "quiz learning-objective derivation capability boundary finalizes the reserved bearer even when derivation fails",
+          "status": "passed",
+          "title": "finalizes the reserved bearer even when derivation fails",
+          "duration": 3.0797999999999774,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["quiz learning-objective derivation capability boundary"],
+          "fullName": "quiz learning-objective derivation capability boundary preserves an authorized runtime result when best-effort Redis cleanup fails",
+          "status": "passed",
+          "title": "preserves an authorized runtime result when best-effort Redis cleanup fails",
+          "duration": 1.0027999999999793,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275309081,
+      "endTime": 1795275309097.0027,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/quiz.learning-objective-derivation.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["learning-objective derivation capability"],
+          "fullName": "learning-objective derivation capability issues a 32-byte opaque bearer while Redis stores only its SHA-256 key",
+          "status": "passed",
+          "title": "issues a 32-byte opaque bearer while Redis stores only its SHA-256 key",
+          "duration": 8.188099999999963,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["learning-objective derivation capability"],
+          "fullName": "learning-objective derivation capability reserves exactly once atomically and finalize consumes all state",
+          "status": "passed",
+          "title": "reserves exactly once atomically and finalize consumes all state",
+          "duration": 1.9775000000000773,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["learning-objective derivation capability"],
+          "fullName": "learning-objective derivation capability rejects cross-quiz, cross-operation, and revision mismatches without consuming the binding",
+          "status": "passed",
+          "title": "rejects cross-quiz, cross-operation, and revision mismatches without consuming the binding",
+          "duration": 1.071700000000078,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["learning-objective derivation capability"],
+          "fullName": "learning-objective derivation capability rejects expired and strictly invalid stored payloads fail closed",
+          "status": "passed",
+          "title": "rejects expired and strictly invalid stored payloads fail closed",
+          "duration": 1.472099999999955,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["learning-objective derivation capability"],
+          "fullName": "learning-objective derivation capability does not allocate reservation state for an unissued bearer",
+          "status": "passed",
+          "title": "does not allocate reservation state for an unissued bearer",
+          "duration": 0.38589999999999236,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["learning-objective derivation capability"],
+          "fullName": "learning-objective derivation capability rejects a delayed reader after another request reserved, ran, and finalized",
+          "status": "passed",
+          "title": "rejects a delayed reader after another request reserved, ran, and finalized",
+          "duration": 1.608600000000024,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275308784,
+      "endTime": 1795275308798.6086,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/lib/learningObjectiveDerivationCapability.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext assembles and validates the complete authorized, solution-free analysis graph",
+          "status": "passed",
+          "title": "assembles and validates the complete authorized, solution-free analysis graph",
+          "duration": 25.06529999999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext authorizes before the first read and again after the learning snapshot read",
+          "status": "passed",
+          "title": "authorizes before the first read and again after the learning snapshot read",
+          "duration": 2.8216999999999643,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext omits unresolved, deleted, archived, and inappropriate task references with a limitation",
+          "status": "passed",
+          "title": "omits unresolved, deleted, archived, and inappropriate task references with a limitation",
+          "duration": 2.4184000000000196,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext keeps an authorized learning-objective Q&A source outside the ranked candidate window",
+          "status": "passed",
+          "title": "keeps an authorized learning-objective Q&A source outside the ranked candidate window",
+          "duration": 2.210499999999911,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext reuses an authorized reference-only Q&A source without treating it as a duplicate",
+          "status": "passed",
+          "title": "reuses an authorized reference-only Q&A source without treating it as a duplicate",
+          "duration": 1.3716000000001713,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext fails closed when independently authorized fragments contain a duplicate source ID",
+          "status": "passed",
+          "title": "fails closed when independently authorized fragments contain a duplicate source ID",
+          "duration": 1.0358000000001084,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext rejects revision drift and host revocation after all content reads",
+          "status": "passed",
+          "title": "rejects revision drift and host revocation after all content reads",
+          "duration": 0.7889000000000124,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext keeps source order and the source revision stable across input ordering",
+          "status": "passed",
+          "title": "keeps source order and the source revision stable across input ordering",
+          "duration": 2.859000000000151,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext keeps the complete bounded candidate graph for later prompt packing",
+          "status": "passed",
+          "title": "keeps the complete bounded candidate graph for later prompt packing",
+          "duration": 16.75759999999991,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext prioritizes confirmed learning-objective Q&A bundles before applying the authorization cap",
+          "status": "passed",
+          "title": "prioritizes confirmed learning-objective Q&A bundles before applying the authorization cap",
+          "duration": 5.371000000000095,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildModerationPromptContext"],
+          "fullName": "buildModerationPromptContext bounds learning-objective Q&A authorization reads by whole deterministic bundles",
+          "status": "passed",
+          "title": "bounds learning-objective Q&A authorization reads by whole deterministic bundles",
+          "duration": 7.070899999999938,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275309163,
+      "endTime": 1795275309231.0708,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/lib/moderationPromptContext.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["buildAuthorizedModerationQaContext"],
+          "fullName": "buildAuthorizedModerationQaContext collects with a repeatable-read transaction and rechecks host access and revisions",
+          "status": "passed",
+          "title": "collects with a repeatable-read transaction and rechecks host access and revisions",
+          "duration": 6.7327999999999975,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildAuthorizedModerationQaContext"],
+          "fullName": "buildAuthorizedModerationQaContext rejects the built context when the final Q&A revision changed",
+          "status": "passed",
+          "title": "rejects the built context when the final Q&A revision changed",
+          "duration": 2.2299000000000433,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildAuthorizedModerationQaContext"],
+          "fullName": "buildAuthorizedModerationQaContext never returns data when the final host authorization was revoked",
+          "status": "passed",
+          "title": "never returns data when the final host authorization was revoked",
+          "duration": 0.8128999999998996,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildAuthorizedModerationQaContext"],
+          "fullName": "buildAuthorizedModerationQaContext samples the retention boundary after the final asynchronous host authorization",
+          "status": "passed",
+          "title": "samples the retention boundary after the final asynchronous host authorization",
+          "duration": 1.2552999999998065,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildAuthorizedModerationQaContext"],
+          "fullName": "buildAuthorizedModerationQaContext degrades a disabled Q&A channel without opening a transaction or cache",
+          "status": "passed",
+          "title": "degrades a disabled Q&A channel without opening a transaction or cache",
+          "duration": 0.575800000000072,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["buildAuthorizedModerationQaContext"],
+          "fullName": "buildAuthorizedModerationQaContext preserves the measured total when no Q&A rows are currently eligible",
+          "status": "passed",
+          "title": "preserves the measured total when no Q&A rows are currently eligible",
+          "duration": 0.5738999999998668,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275308880,
+      "endTime": 1795275308892.5757,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/lib/moderationQaContext.service.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 nimmt ohne Produktflag keinen Job an und baut keinen Kontext",
+          "status": "passed",
+          "title": "nimmt ohne Produktflag keinen Job an und baut keinen Kontext",
+          "duration": 2.2409000000000106,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 durchläuft initiale, Vor- und Nachprüfung und liefert ein V2-Ergebnis",
+          "status": "passed",
+          "title": "durchläuft initiale, Vor- und Nachprüfung und liefert ein V2-Ergebnis",
+          "duration": 49.97039999999993,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 baut beim Polling eines pending-Ergebnisses keinen Kontext neu",
+          "status": "passed",
+          "title": "baut beim Polling eines pending-Ergebnisses keinen Kontext neu",
+          "duration": 8.170000000000073,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 verwirft generative Ausgabe wenn sich Quellen während der Inferenz ändern",
+          "status": "passed",
+          "title": "verwirft generative Ausgabe wenn sich Quellen während der Inferenz ändern",
+          "duration": 22.397199999999884,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 liefert bei entzogenem Host-Zugriff keine Quellen aus",
+          "status": "passed",
+          "title": "liefert bei entzogenem Host-Zugriff keine Quellen aus",
+          "duration": 15.556499999999915,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 revalidiert ein fertiges Ergebnis unmittelbar vor der Auslieferung",
+          "status": "passed",
+          "title": "revalidiert ein fertiges Ergebnis unmittelbar vor der Auslieferung",
+          "duration": 31.621599999999944,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 bricht den laufenden Processor beim Queue-Timeout ab und gibt den Slot frei",
+          "status": "passed",
+          "title": "bricht den laufenden Processor beim Queue-Timeout ab und gibt den Slot frei",
+          "duration": 45.9844999999998,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 bricht und verwirft laufende Artefakte bei Session-Purge",
+          "status": "passed",
+          "title": "bricht und verwirft laufende Artefakte bei Session-Purge",
+          "duration": 76.99180000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 löscht den ephemeren Host-Token nach dem Job aus dem Queue-Objekt",
+          "status": "passed",
+          "title": "löscht den ephemeren Host-Token nach dem Job aus dem Queue-Objekt",
+          "duration": 15.988200000000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 ruft bei weniger als drei berechtigten Fragen keinen Processor auf",
+          "status": "passed",
+          "title": "ruft bei weniger als drei berechtigten Fragen keinen Processor auf",
+          "duration": 1.477100000000064,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 ersetzt ein fertiges Ergebnis wenn der berechtigte Korpus unter drei Fragen schrumpft",
+          "status": "passed",
+          "title": "ersetzt ein fertiges Ergebnis wenn der berechtigte Korpus unter drei Fragen schrumpft",
+          "duration": 13.99940000000015,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["qaSummaryQueue V2"],
+          "fullName": "qaSummaryQueue V2 reiht bei überlappendem Kontextaufbau derselben Session nur einen Job ein",
+          "status": "passed",
+          "title": "reiht bei überlappendem Kontextaufbau derselben Session nur einen Job ein",
+          "duration": 14.945600000000013,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795275309270,
+      "endTime": 1795275309568.9456,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/lib/qaSummaryQueue.test.ts"
+    }
+  ]
+}

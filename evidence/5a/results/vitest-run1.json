@@ -1,0 +1,717 @@
+{
+  "numTotalTestSuites": 8,
+  "numPassedTestSuites": 8,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 65,
+  "numPassedTests": 65,
+  "numFailedTests": 0,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesRemovedList": [],
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 0,
+    "updated": 0,
+    "didUpdate": false
+  },
+  "startTime": 1795277013644,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A0 kein Token → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A0 kein Token → qa.summaryRuntime",
+          "duration": 12.472099999999955,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A0 kein Token → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A0 kein Token → qa.summaryContextPreview",
+          "duration": 0.6030000000000655,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A0 kein Token → qa.requestSummary",
+          "status": "passed",
+          "title": "A0 kein Token → qa.requestSummary",
+          "duration": 0.3996999999999389,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A0 kein Token → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A0 kein Token → session.getLearningObjectives",
+          "duration": 0.41929999999956635,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A0 kein Token → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A0 kein Token → session.saveLearningObjectives",
+          "duration": 0.34720000000015716,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A1 Session-Code als Token (Clientwissen) → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A1 Session-Code als Token (Clientwissen) → qa.summaryRuntime",
+          "duration": 0.5932999999995445,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A1 Session-Code als Token (Clientwissen) → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A1 Session-Code als Token (Clientwissen) → qa.summaryContextPreview",
+          "duration": 0.3665000000000873,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A1 Session-Code als Token (Clientwissen) → qa.requestSummary",
+          "status": "passed",
+          "title": "A1 Session-Code als Token (Clientwissen) → qa.requestSummary",
+          "duration": 0.3834999999999127,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A1 Session-Code als Token (Clientwissen) → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A1 Session-Code als Token (Clientwissen) → session.getLearningObjectives",
+          "duration": 0.41310000000066793,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A1 Session-Code als Token (Clientwissen) → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A1 Session-Code als Token (Clientwissen) → session.saveLearningObjectives",
+          "duration": 0.38209999999980937,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A2 gültiger Host-Token einer fremden Session → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A2 gültiger Host-Token einer fremden Session → qa.summaryRuntime",
+          "duration": 0.6624000000001615,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A2 gültiger Host-Token einer fremden Session → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A2 gültiger Host-Token einer fremden Session → qa.summaryContextPreview",
+          "duration": 0.8180999999995038,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A2 gültiger Host-Token einer fremden Session → qa.requestSummary",
+          "status": "passed",
+          "title": "A2 gültiger Host-Token einer fremden Session → qa.requestSummary",
+          "duration": 0.45790000000033615,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A2 gültiger Host-Token einer fremden Session → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A2 gültiger Host-Token einer fremden Session → session.getLearningObjectives",
+          "duration": 0.48100000000067666,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A2 gültiger Host-Token einer fremden Session → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A2 gültiger Host-Token einer fremden Session → session.saveLearningObjectives",
+          "duration": 0.4180999999998676,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A3 Host-Token nach Credential-Rotation → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A3 Host-Token nach Credential-Rotation → qa.summaryRuntime",
+          "duration": 0.5272000000004482,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A3 Host-Token nach Credential-Rotation → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A3 Host-Token nach Credential-Rotation → qa.summaryContextPreview",
+          "duration": 0.41160000000036234,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A3 Host-Token nach Credential-Rotation → qa.requestSummary",
+          "status": "passed",
+          "title": "A3 Host-Token nach Credential-Rotation → qa.requestSummary",
+          "duration": 0.34769999999934953,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A3 Host-Token nach Credential-Rotation → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A3 Host-Token nach Credential-Rotation → session.getLearningObjectives",
+          "duration": 0.29179999999996653,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A3 Host-Token nach Credential-Rotation → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A3 Host-Token nach Credential-Rotation → session.saveLearningObjectives",
+          "duration": 0.27330000000074506,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A4 Host-Token nach TTL-Ablauf (900 s) → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A4 Host-Token nach TTL-Ablauf (900 s) → qa.summaryRuntime",
+          "duration": 1.2683999999999287,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A4 Host-Token nach TTL-Ablauf (900 s) → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A4 Host-Token nach TTL-Ablauf (900 s) → qa.summaryContextPreview",
+          "duration": 0.3787000000002081,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A4 Host-Token nach TTL-Ablauf (900 s) → qa.requestSummary",
+          "status": "passed",
+          "title": "A4 Host-Token nach TTL-Ablauf (900 s) → qa.requestSummary",
+          "duration": 0.37110000000029686,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A4 Host-Token nach TTL-Ablauf (900 s) → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A4 Host-Token nach TTL-Ablauf (900 s) → session.getLearningObjectives",
+          "duration": 0.3316000000004351,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A4 Host-Token nach TTL-Ablauf (900 s) → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A4 Host-Token nach TTL-Ablauf (900 s) → session.saveLearningObjectives",
+          "duration": 0.2758000000003449,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A5 widerrufener Paired Host → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A5 widerrufener Paired Host → qa.summaryRuntime",
+          "duration": 0.24829999999928987,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A5 widerrufener Paired Host → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A5 widerrufener Paired Host → qa.summaryContextPreview",
+          "duration": 0.17289999999957217,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A5 widerrufener Paired Host → qa.requestSummary",
+          "status": "passed",
+          "title": "A5 widerrufener Paired Host → qa.requestSummary",
+          "duration": 0.15970000000015716,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A5 widerrufener Paired Host → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A5 widerrufener Paired Host → session.getLearningObjectives",
+          "duration": 0.14050000000042928,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A5 widerrufener Paired Host → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A5 widerrufener Paired Host → session.saveLearningObjectives",
+          "duration": 0.13360000000011496,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A6 aktiver Paired Host → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A6 aktiver Paired Host → qa.summaryRuntime",
+          "duration": 0.6161000000001877,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A6 aktiver Paired Host → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A6 aktiver Paired Host → qa.summaryContextPreview",
+          "duration": 1.0346999999992477,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A6 aktiver Paired Host → qa.requestSummary",
+          "status": "passed",
+          "title": "A6 aktiver Paired Host → qa.requestSummary",
+          "duration": 15.322699999999713,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A6 aktiver Paired Host → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A6 aktiver Paired Host → session.getLearningObjectives",
+          "duration": 1.056999999999789,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A6 aktiver Paired Host → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A6 aktiver Paired Host → session.saveLearningObjectives",
+          "duration": 1.6737000000002809,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A7 Original-Host → qa.summaryRuntime",
+          "status": "passed",
+          "title": "A7 Original-Host → qa.summaryRuntime",
+          "duration": 1.2174999999997453,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A7 Original-Host → qa.summaryContextPreview",
+          "status": "passed",
+          "title": "A7 Original-Host → qa.summaryContextPreview",
+          "duration": 2.055000000000291,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A7 Original-Host → qa.requestSummary",
+          "status": "passed",
+          "title": "A7 Original-Host → qa.requestSummary",
+          "duration": 25.138200000000325,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A7 Original-Host → session.getLearningObjectives",
+          "status": "passed",
+          "title": "A7 Original-Host → session.getLearningObjectives",
+          "duration": 0.9170999999996639,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) A7 Original-Host → session.saveLearningObjectives",
+          "status": "passed",
+          "title": "A7 Original-Host → session.saveLearningObjectives",
+          "duration": 1.228900000000067,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) Z1 Original-Host, Session beendet, im Nachbereitungsfenster",
+          "status": "passed",
+          "title": "Z1 Original-Host, Session beendet, im Nachbereitungsfenster",
+          "duration": 28.73439999999937,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) Z1b Original-Host, Session beendet und Q&A-Kanal geschlossen",
+          "status": "passed",
+          "title": "Z1b Original-Host, Session beendet und Q&A-Kanal geschlossen",
+          "duration": 4.95890000000054,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) Z2 Original-Host mit noch lebendem Token, Nachbereitungsfenster abgelaufen",
+          "status": "passed",
+          "title": "Z2 Original-Host mit noch lebendem Token, Nachbereitungsfenster abgelaufen",
+          "duration": 1.7378000000007887,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)"],
+          "fullName": "Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung) Z3 unbekannte sessionId ohne Token (Reihenfolge NOT_FOUND vs. UNAUTHORIZED)",
+          "status": "passed",
+          "title": "Z3 unbekannte sessionId ohne Token (Reihenfolge NOT_FOUND vs. UNAUTHORIZED)",
+          "duration": 0.5255999999999403,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795277018147,
+      "endTime": 1795277018258.5256,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/thema5a/t1-zugriffsmatrix.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime R0 unberechtigte Aufträge erreichen die Runtime nicht (0 Requests)",
+          "status": "passed",
+          "title": "R0 unberechtigte Aufträge erreichen die Runtime nicht (0 Requests)",
+          "duration": 3.517699999999877,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime S1 BASELINE (echte Runtime): Credential-Rotation während der Inferenz",
+          "status": "passed",
+          "title": "S1 BASELINE (echte Runtime): Credential-Rotation während der Inferenz",
+          "duration": 30037.8444,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime S1 V1 (echte Runtime): Credential-Rotation während der Inferenz",
+          "status": "passed",
+          "title": "S1 V1 (echte Runtime): Credential-Rotation während der Inferenz",
+          "duration": 30527.202399999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime S1 V2 (echte Runtime): Credential-Rotation während der Inferenz",
+          "status": "passed",
+          "title": "S1 V2 (echte Runtime): Credential-Rotation während der Inferenz",
+          "duration": 30526.186500000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime S2 BASELINE (echte Runtime): Paired Host wird während der Inferenz entkoppelt",
+          "status": "passed",
+          "title": "S2 BASELINE (echte Runtime): Paired Host wird während der Inferenz entkoppelt",
+          "duration": 30527.120299999995,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime S2 V1 (echte Runtime): Paired Host wird während der Inferenz entkoppelt",
+          "status": "passed",
+          "title": "S2 V1 (echte Runtime): Paired Host wird während der Inferenz entkoppelt",
+          "duration": 30522.38810000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2-real – Rechteentzug bei echter privater Runtime"],
+          "fullName": "Thema 5A / T2-real – Rechteentzug bei echter privater Runtime S2 V2 (echte Runtime): Paired Host wird während der Inferenz entkoppelt",
+          "status": "passed",
+          "title": "S2 V2 (echte Runtime): Paired Host wird während der Inferenz entkoppelt",
+          "duration": 30535.047300000006,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795277014967,
+      "endTime": 1795277197648.0474,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/thema5a/t2-real-runtime.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S1 BASELINE: Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+          "status": "passed",
+          "title": "S1 BASELINE: Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+          "duration": 20.403499999999894,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S1 V1: Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+          "status": "passed",
+          "title": "S1 V1: Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+          "duration": 21.88220000000001,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S1 V2: Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+          "status": "passed",
+          "title": "S1 V2: Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+          "duration": 15.482999999999947,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S2 BASELINE: Paired Host wird während der Inferenz entkoppelt",
+          "status": "passed",
+          "title": "S2 BASELINE: Paired Host wird während der Inferenz entkoppelt",
+          "duration": 15.954099999999926,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S2 V1: Paired Host wird während der Inferenz entkoppelt",
+          "status": "passed",
+          "title": "S2 V1: Paired Host wird während der Inferenz entkoppelt",
+          "duration": 15.964699999999993,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S2 V2: Paired Host wird während der Inferenz entkoppelt",
+          "status": "passed",
+          "title": "S2 V2: Paired Host wird während der Inferenz entkoppelt",
+          "duration": 15.482099999999946,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S3 BASELINE: Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+          "status": "passed",
+          "title": "S3 BASELINE: Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+          "duration": 13.229900000000043,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S3 V1: Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+          "status": "passed",
+          "title": "S3 V1: Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+          "duration": 15.59680000000003,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T2 – Rechteentzug während der Verarbeitung"],
+          "fullName": "Thema 5A / T2 – Rechteentzug während der Verarbeitung S3 V2: Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+          "status": "passed",
+          "title": "S3 V2: Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+          "duration": 31.046499999999924,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795277014952,
+      "endTime": 1795277015117.0464,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/thema5a/t2-rechteentzug.test.ts"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": ["Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe"],
+          "fullName": "Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe F1 Kanal offen (Referenz)",
+          "status": "passed",
+          "title": "F1 Kanal offen (Referenz)",
+          "duration": 6.186899999999923,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe"],
+          "fullName": "Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe F2 Host schließt den Q&A-Kanal (qaOpen=false)",
+          "status": "passed",
+          "title": "F2 Host schließt den Q&A-Kanal (qaOpen=false)",
+          "duration": 0.724999999999909,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe"],
+          "fullName": "Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe F3 Deadline abgelaufen (qaClosesAt in der Vergangenheit)",
+          "status": "passed",
+          "title": "F3 Deadline abgelaufen (qaClosesAt in der Vergangenheit)",
+          "duration": 0.5589000000002216,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe"],
+          "fullName": "Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe F4 Q&A-Kanal deaktiviert (qaEnabled=false)",
+          "status": "passed",
+          "title": "F4 Q&A-Kanal deaktiviert (qaEnabled=false)",
+          "duration": 0.30150000000003274,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        },
+        {
+          "ancestorTitles": ["Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe"],
+          "fullName": "Thema 5A / T3 – Freigabegrenze an Teilnehmer- und Presenter-Ausgabe F5 anonymer Modus aktiv (Kanal offen)",
+          "status": "passed",
+          "title": "F5 anonymer Modus aktiv (Kanal offen)",
+          "duration": 0.7190000000000509,
+          "failureMessages": [],
+          "meta": {},
+          "tags": []
+        }
+      ],
+      "startTime": 1795277014934,
+      "endTime": 1795277014942.719,
+      "status": "passed",
+      "message": "",
+      "name": "C:/repos/arsnova.eu/apps/backend/src/__tests__/thema5a/t3-freigabe-ausgabepunkt.test.ts"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "name": "t2-real-runtime",
+  "runId": "1",
+  "recordedAt": "2026-11-21T16:06:37.650Z",
+  "data": [
+    {
+      "case": "R0 unberechtigte requestSummary-Aufrufe",
+      "outcomes": ["UNAUTHORIZED", "UNAUTHORIZED", "UNAUTHORIZED"],
+      "proxyLog": []
+    },
+    {
+      "case": "S1 Credential-Rotation während der Inferenz",
+      "variant": "BASELINE",
+      "runtimeRequests": [
+        {
+          "method": "GET",
+          "path": "/slots",
+          "status": 200,
+          "durationMs": 1
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "status": 0,
+          "durationMs": 30011
+        }
+      ],
+      "inferenceMs": 30011,
+      "revokedAfterMs": 12,
+      "totalMs": 30024,
+      "runtimeAuthAlwaysServiceToken": true,
+      "hostTokenSeenByRuntime": false,
+      "job": {
+        "status": "failed",
+        "effectiveMode": "rule-based",
+        "fallbackReason": "permission_changed",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": "fallback:permission_changed"
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": null
+      },
+      "legitimateRead": null
+    },
+    {
+      "case": "S1 Credential-Rotation während der Inferenz",
+      "variant": "V1",
+      "runtimeRequests": [
+        {
+          "method": "GET",
+          "path": "/slots",
+          "status": 200,
+          "durationMs": 1
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "status": 0,
+          "durationMs": 0
+        }
+      ],
+      "inferenceMs": 0,
+      "revokedAfterMs": 6,
+      "totalMs": 30017,
+      "runtimeAuthAlwaysServiceToken": true,
+      "hostTokenSeenByRuntime": false,
+      "job": {
+        "status": "ready",
+        "effectiveMode": "extractive",
+        "fallbackReason": "timeout",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      },
+      "revokedRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      },
+      "legitimateRead": null
+    },
+    {
+      "case": "S1 Credential-Rotation während der Inferenz",
+      "variant": "V2",
+      "runtimeRequests": [
+        {
+          "method": "GET",
+          "path": "/slots",
+          "status": 200,
+          "durationMs": 1
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "status": 0,
+          "durationMs": 0
+        }
+      ],
+      "inferenceMs": 0,
+      "revokedAfterMs": 6,
+      "totalMs": 30017,
+      "runtimeAuthAlwaysServiceToken": true,
+      "hostTokenSeenByRuntime": false,
+      "job": {
+        "status": "ready",
+        "effectiveMode": "extractive",
+        "fallbackReason": "timeout",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": null
+      },
+      "legitimateRead": null
+    },
+    {
+      "case": "S2 Paired Host wird während der Inferenz entkoppelt",
+      "variant": "BASELINE",
+      "runtimeRequests": [
+        {
+          "method": "GET",
+          "path": "/slots",
+          "status": 200,
+          "durationMs": 1
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "status": 0,
+          "durationMs": 0
+        }
+      ],
+      "inferenceMs": 0,
+      "revokedAfterMs": 5,
+      "totalMs": 30013,
+      "runtimeAuthAlwaysServiceToken": true,
+      "hostTokenSeenByRuntime": false,
+      "job": {
+        "status": "failed",
+        "effectiveMode": "rule-based",
+        "fallbackReason": "permission_changed",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": "fallback:permission_changed"
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": null
+      },
+      "legitimateRead": {
+        "outcome": "OK",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": "fallback:permission_changed"
+      }
+    },
+    {
+      "case": "S2 Paired Host wird während der Inferenz entkoppelt",
+      "variant": "V1",
+      "runtimeRequests": [
+        {
+          "method": "GET",
+          "path": "/slots",
+          "status": 200,
+          "durationMs": 0
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "status": 0,
+          "durationMs": 0
+        }
+      ],
+      "inferenceMs": 0,
+      "revokedAfterMs": 4,
+      "totalMs": 30013,
+      "runtimeAuthAlwaysServiceToken": true,
+      "hostTokenSeenByRuntime": false,
+      "job": {
+        "status": "ready",
+        "effectiveMode": "extractive",
+        "fallbackReason": "timeout",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      },
+      "revokedRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      },
+      "legitimateRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      }
+    },
+    {
+      "case": "S2 Paired Host wird während der Inferenz entkoppelt",
+      "variant": "V2",
+      "runtimeRequests": [
+        {
+          "method": "GET",
+          "path": "/slots",
+          "status": 200,
+          "durationMs": 1
+        },
+        {
+          "method": "POST",
+          "path": "/v1/chat/completions",
+          "status": 0,
+          "durationMs": 0
+        }
+      ],
+      "inferenceMs": 0,
+      "revokedAfterMs": 4,
+      "totalMs": 30010,
+      "runtimeAuthAlwaysServiceToken": true,
+      "hostTokenSeenByRuntime": false,
+      "job": {
+        "status": "ready",
+        "effectiveMode": "extractive",
+        "fallbackReason": "timeout",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0,
+        "modelVersion": null
+      },
+      "legitimateRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1,
+        "modelVersion": "extractive-v2"
+      }
+    }
+  ]
+}

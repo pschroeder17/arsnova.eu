@@ -1,0 +1,181 @@
+{
+  "name": "t2-rechteentzug-stub",
+  "runId": "3",
+  "recordedAt": "2026-11-21T16:09:47.867Z",
+  "data": [
+    {
+      "scenario": "S1 Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+      "variant": "BASELINE",
+      "job": {
+        "status": "failed",
+        "fallbackReason": "permission_changed",
+        "statements": 0,
+        "sources": 0
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": null,
+      "processorCalls": 1,
+      "violation": false
+    },
+    {
+      "scenario": "S1 Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+      "variant": "V1",
+      "job": {
+        "status": "ready",
+        "fallbackReason": null,
+        "statements": 1,
+        "sources": 1
+      },
+      "revokedRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1
+      },
+      "legitimateRead": null,
+      "processorCalls": 1,
+      "violation": true
+    },
+    {
+      "scenario": "S1 Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",
+      "variant": "V2",
+      "job": {
+        "status": "ready",
+        "fallbackReason": null,
+        "statements": 1,
+        "sources": 1
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": null,
+      "processorCalls": 1,
+      "violation": true
+    },
+    {
+      "scenario": "S2 Paired Host wird während der Inferenz entkoppelt",
+      "variant": "BASELINE",
+      "job": {
+        "status": "failed",
+        "fallbackReason": "permission_changed",
+        "statements": 0,
+        "sources": 0
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": {
+        "outcome": "OK",
+        "statements": 0,
+        "sources": 0
+      },
+      "processorCalls": 1,
+      "violation": false
+    },
+    {
+      "scenario": "S2 Paired Host wird während der Inferenz entkoppelt",
+      "variant": "V1",
+      "job": {
+        "status": "ready",
+        "fallbackReason": null,
+        "statements": 1,
+        "sources": 1
+      },
+      "revokedRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1
+      },
+      "legitimateRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1
+      },
+      "processorCalls": 1,
+      "violation": true
+    },
+    {
+      "scenario": "S2 Paired Host wird während der Inferenz entkoppelt",
+      "variant": "V2",
+      "job": {
+        "status": "ready",
+        "fallbackReason": null,
+        "statements": 1,
+        "sources": 1
+      },
+      "revokedRead": {
+        "outcome": "UNAUTHORIZED",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": {
+        "outcome": "OK",
+        "statements": 1,
+        "sources": 1
+      },
+      "processorCalls": 1,
+      "violation": true
+    },
+    {
+      "scenario": "S3 Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+      "variant": "BASELINE",
+      "job": {
+        "status": "failed",
+        "fallbackReason": "permission_changed",
+        "statements": 0,
+        "sources": 0
+      },
+      "revokedRead": {
+        "outcome": "FORBIDDEN",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": null,
+      "processorCalls": 1,
+      "violation": false
+    },
+    {
+      "scenario": "S3 Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+      "variant": "V1",
+      "job": {
+        "status": "failed",
+        "fallbackReason": "permission_changed",
+        "statements": 0,
+        "sources": 0
+      },
+      "revokedRead": {
+        "outcome": "FORBIDDEN",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": null,
+      "processorCalls": 1,
+      "violation": false
+    },
+    {
+      "scenario": "S3 Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)",
+      "variant": "V2",
+      "job": {
+        "status": "ready",
+        "fallbackReason": null,
+        "statements": 1,
+        "sources": 1
+      },
+      "revokedRead": {
+        "outcome": "FORBIDDEN",
+        "statements": 0,
+        "sources": 0
+      },
+      "legitimateRead": null,
+      "processorCalls": 1,
+      "violation": true
+    }
+  ]
+}
