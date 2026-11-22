@@ -1,0 +1,362 @@
+{
+  "name": "t1-zugriffsmatrix",
+  "runId": "3",
+  "recordedAt": "2026-11-22T00:32:56.360Z",
+  "infra": {
+    "database": "PostgreSQL 16 (Docker)",
+    "redis": "Redis 7.4 (Docker)",
+    "pairing": "lib/hostPairing.ts"
+  },
+  "data": [
+    {
+      "actor": "A0 kein Token",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A0 kein Token",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A0 kein Token",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A0 kein Token",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A0 kein Token",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A1 Session-Code als Token (Clientwissen)",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A1 Session-Code als Token (Clientwissen)",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A1 Session-Code als Token (Clientwissen)",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A1 Session-Code als Token (Clientwissen)",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A1 Session-Code als Token (Clientwissen)",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A2 gültiger Host-Token einer fremden Session",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A2 gültiger Host-Token einer fremden Session",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A2 gültiger Host-Token einer fremden Session",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A2 gültiger Host-Token einer fremden Session",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A2 gültiger Host-Token einer fremden Session",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A3 Host-Token nach Credential-Rotation",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A3 Host-Token nach Credential-Rotation",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A3 Host-Token nach Credential-Rotation",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A3 Host-Token nach Credential-Rotation",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A3 Host-Token nach Credential-Rotation",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A4 Host-Token nach TTL-Ablauf (900 s)",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A4 Host-Token nach TTL-Ablauf (900 s)",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A4 Host-Token nach TTL-Ablauf (900 s)",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A4 Host-Token nach TTL-Ablauf (900 s)",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A4 Host-Token nach TTL-Ablauf (900 s)",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A5 widerrufener Paired Host",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A5 widerrufener Paired Host",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A5 widerrufener Paired Host",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A5 widerrufener Paired Host",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A5 widerrufener Paired Host",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A6 aktiver Paired Host",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A6 aktiver Paired Host",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A6 aktiver Paired Host",
+      "procedure": "qa.requestSummary",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 1
+    },
+    {
+      "actor": "A6 aktiver Paired Host",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "CONFLICT",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A6 aktiver Paired Host",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "BAD_REQUEST",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A7 Original-Host",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A7 Original-Host",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A7 Original-Host",
+      "procedure": "qa.requestSummary",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 1
+    },
+    {
+      "actor": "A7 Original-Host",
+      "procedure": "session.getLearningObjectives",
+      "outcome": "CONFLICT",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "A7 Original-Host",
+      "procedure": "session.saveLearningObjectives",
+      "outcome": "BAD_REQUEST",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z1 Original-Host, Session beendet (Nachbereitung offen)",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z1 Original-Host, Session beendet (Nachbereitung offen)",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z1 Original-Host, Session beendet (Nachbereitung offen)",
+      "procedure": "qa.requestSummary",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 1
+    },
+    {
+      "actor": "Z1b Original-Host, Session beendet + Kanal geschlossen",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z1b Original-Host, Session beendet + Kanal geschlossen",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "OK",
+      "granted": true,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z1b Original-Host, Session beendet + Kanal geschlossen",
+      "procedure": "qa.requestSummary",
+      "outcome": "FORBIDDEN",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z2 Original-Host, Nachbereitungsfenster abgelaufen",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z2 Original-Host, Nachbereitungsfenster abgelaufen",
+      "procedure": "qa.summaryContextPreview",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z2 Original-Host, Nachbereitungsfenster abgelaufen",
+      "procedure": "qa.requestSummary",
+      "outcome": "UNAUTHORIZED",
+      "granted": false,
+      "processorCalls": 0
+    },
+    {
+      "actor": "Z3 kein Token, unbekannte sessionId",
+      "procedure": "qa.summaryRuntime",
+      "outcome": "NOT_FOUND",
+      "granted": false,
+      "processorCalls": 0
+    }
+  ]
+}

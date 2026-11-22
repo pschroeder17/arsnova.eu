@@ -13,25 +13,20 @@
  * Laufs auslöst. Der reale Runtime-Lauf steht in t2-real-runtime.test.ts.
  */
 import type { IncomingMessage } from 'node:http';
-import { afterAll, beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterAll, afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   MODERATION_ANALYSIS_CONTEXT_CONTRACT_VERSION,
   MODERATION_PROMPT_CONTEXT_REFERENCE_FIXTURE_V1,
   ModerationAnalysisContextV1Schema,
   QaSummaryExecutionV2Schema,
 } from '@arsnova/shared-types';
-import {
-  baseSession,
-  createFakeDb,
-  createFakeRedis,
-  createPairingRegistry,
-  outcomeOf,
-  writeEvidence,
-} from './fakes';
+import { baseSession, outcomeOf, writeEvidence } from './fakes';
+import { createWorld, type PairedDevice } from './world';
 
 type Variant = 'BASELINE' | 'V1' | 'V2';
 
 const env = vi.hoisted(() => ({
+  real: process.env['THEMA5A_REAL_INFRA'] === '1',
   db: null as ReturnType<typeof import('./fakes').createFakeDb> | null,
   redis: null as ReturnType<typeof import('./fakes').createFakeRedis> | null,
   pairing: null as ReturnType<typeof import('./fakes').createPairingRegistry> | null,
@@ -39,18 +34,29 @@ const env = vi.hoisted(() => ({
   decisionCache: new Set<string>(),
 }));
 
-vi.mock('../../db', () => ({
-  prisma: new Proxy(
-    {},
-    { get: (_target, key) => (env.db!.prisma as Record<string | symbol, unknown>)[key] },
-  ),
-}));
-vi.mock('../../redis', () => ({ getRedis: () => env.redis! }));
-vi.mock('../../lib/hostPairing', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../../lib/hostPairing')>()),
-  findPairedHostByToken: (code: string, token: string) =>
-    env.pairing!.findPairedHostByToken(code, token),
-}));
+// THEMA5A_REAL_INFRA=1: echte Module (PostgreSQL/Redis in Docker), sonst In-Memory-Ersatz.
+vi.mock('../../db', async (importOriginal) =>
+  env.real
+    ? importOriginal()
+    : {
+        prisma: new Proxy(
+          {},
+          { get: (_target, key) => (env.db!.prisma as Record<string | symbol, unknown>)[key] },
+        ),
+      },
+);
+vi.mock('../../redis', async (importOriginal) =>
+  env.real ? importOriginal() : { getRedis: () => env.redis! },
+);
+vi.mock('../../lib/hostPairing', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../../lib/hostPairing')>();
+  if (env.real) return actual;
+  return {
+    ...actual,
+    findPairedHostByToken: (code: string, token: string) =>
+      env.pairing!.findPairedHostByToken(code, token),
+  };
+});
 vi.mock('../../lib/hostAuth', async (importOriginal) => {
   const actual = await importOriginal<typeof import('../../lib/hostAuth')>();
   return {
@@ -142,54 +148,57 @@ async function read(token: string | null) {
   }
 }
 
+type Tokens = { starter: string; legit: string | null; device?: PairedDevice };
 type Scenario = {
   id: string;
   label: string;
-  setup: () => Promise<{ starter: string; legit: string | null }>;
+  setup: () => Promise<Tokens>;
   /** Wird ausgelöst, während das Modell „rechnet“. */
-  revoke: (tokens: { starter: string }) => void;
+  revoke: (tokens: Tokens) => unknown;
 };
+
+const world = createWorld(env);
 
 const scenarios: Scenario[] = [
   {
     id: 'S1',
     label: 'Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz',
     setup: async () => ({ starter: await issueHostToken(SESSION.code, 1), legit: null }),
-    revoke: () => {
-      env.db!.rotateCredential(SESSION.code);
-    },
+    revoke: () => world.rotateCredential(SESSION.code),
   },
   {
     id: 'S2',
     label: 'Paired Host wird während der Inferenz entkoppelt',
     setup: async () => {
-      env.pairing!.add('paired-5a-s2', SESSION.code, 'device-s2');
-      return { starter: 'paired-5a-s2', legit: await issueHostToken(SESSION.code, 1) };
+      const device = await world.pairDevice(SESSION, 's2');
+      return { starter: device.token, legit: await issueHostToken(SESSION.code, 1), device };
     },
-    revoke: () => env.pairing!.revoke('paired-5a-s2'),
+    revoke: (tokens) => world.revokePaired(SESSION, tokens.device!),
   },
   {
     id: 'S3',
     label: 'Nachbereitungsfenster endet während der Inferenz (zeitabhängige Zulässigkeit)',
     setup: async () => {
       const token = await issueHostToken(SESSION.code, 1);
-      const session = env.db!.sessions.get(SESSION.id)!;
-      session.status = 'FINISHED';
-      session.endedAt = new Date(Date.now() - 60 * 60 * 1000);
+      await world.updateSession(SESSION.id, {
+        status: 'FINISHED',
+        endedAt: new Date(Date.now() - 60 * 60 * 1000),
+      });
       return { starter: token, legit: null };
     },
-    revoke: () => {
-      const session = env.db!.sessions.get(SESSION.id)!;
-      session.endedAt = new Date(Date.now() - 15 * 24 * 60 * 60 * 1000);
-      session.expiresAt = session.endedAt;
-    },
+    revoke: () => world.expirePostProcessingWindow(SESSION.id),
   },
 ];
 
 describe('Thema 5A / T2 – Rechteentzug während der Verarbeitung', () => {
   beforeEach(() => {
+    vi.useRealTimers();
     vi.unstubAllEnvs();
     vi.stubEnv('QA_SUMMARY_ENABLED', 'true');
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
   });
 
   afterAll(() => writeEvidence('t2-rechteentzug-stub', measurements));
@@ -197,15 +206,12 @@ describe('Thema 5A / T2 – Rechteentzug während der Verarbeitung', () => {
   for (const scenario of scenarios) {
     for (const variant of ['BASELINE', 'V1', 'V2'] as const) {
       it(`${scenario.id} ${variant}: ${scenario.label}`, async () => {
-        env.db = createFakeDb();
-        env.redis = createFakeRedis();
-        env.pairing = createPairingRegistry();
         env.variant = variant;
         env.decisionCache.clear();
-        env.db.addSession(baseSession(SESSION));
+        await world.reset([baseSession(SESSION)]);
         const authorizedOnce = new Set<string>();
         let processorCalls = 0;
-        let tokens: { starter: string; legit: string | null } = { starter: '', legit: null };
+        let tokens: Tokens = { starter: '', legit: null };
 
         resetQaSummaryQueueForTests({
           prepare: async ({ sessionId, access }) => {
@@ -217,7 +223,7 @@ describe('Thema 5A / T2 – Rechteentzug während der Verarbeitung', () => {
           plan: () => plan,
           processor: async () => {
             processorCalls += 1;
-            scenario.revoke(tokens); // Entzug, während das Modell rechnet
+            await scenario.revoke(tokens); // Entzug, während das Modell rechnet
             return {
               output: {
                 status: 'ready',
@@ -249,7 +255,11 @@ describe('Thema 5A / T2 – Rechteentzug während der Verarbeitung', () => {
           .createCaller(ctx(tokens.starter))
           .requestSummary({ sessionId: SESSION.id, locale: 'de' });
         expect(started.result?.status).toBe('pending');
-        await waitForQaSummaryIdleForTests();
+        // S3 mit echter DB stellt die Backend-Uhr (Date) um 14 Tage vor; die Warte-Hilfe misst
+        // mit Date.now(), daher großzügiges Limit (Abbruch übernimmt das Vitest-Testlimit).
+        await waitForQaSummaryIdleForTests(
+          world.mode === 'real' ? 31 * 24 * 60 * 60 * 1000 : 1_000,
+        );
 
         const state = getQaSummaryRuntime(SESSION.id).result;
         const revokedRead = await read(tokens.starter);

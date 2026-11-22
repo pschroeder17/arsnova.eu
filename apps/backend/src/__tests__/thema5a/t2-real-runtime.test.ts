@@ -21,18 +21,13 @@ import {
   MODERATION_PROMPT_CONTEXT_REFERENCE_FIXTURE_V1,
   ModerationAnalysisContextV1Schema,
 } from '@arsnova/shared-types';
-import {
-  baseSession,
-  createFakeDb,
-  createFakeRedis,
-  createPairingRegistry,
-  outcomeOf,
-  writeEvidence,
-} from './fakes';
+import { baseSession, outcomeOf, writeEvidence } from './fakes';
+import { createWorld, type PairedDevice } from './world';
 
 const RUN = process.env['RUN_5A_REAL_RUNTIME'] === '1';
 
 const env = vi.hoisted(() => ({
+  real: process.env['THEMA5A_REAL_INFRA'] === '1',
   db: null as ReturnType<typeof import('./fakes').createFakeDb> | null,
   redis: null as ReturnType<typeof import('./fakes').createFakeRedis> | null,
   pairing: null as ReturnType<typeof import('./fakes').createPairingRegistry> | null,
@@ -40,18 +35,29 @@ const env = vi.hoisted(() => ({
   decisionCache: new Set<string>(),
 }));
 
-vi.mock('../../db', () => ({
-  prisma: new Proxy(
-    {},
-    { get: (_target, key) => (env.db!.prisma as Record<string | symbol, unknown>)[key] },
-  ),
-}));
-vi.mock('../../redis', () => ({ getRedis: () => env.redis! }));
-vi.mock('../../lib/hostPairing', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../../lib/hostPairing')>()),
-  findPairedHostByToken: (code: string, token: string) =>
-    env.pairing!.findPairedHostByToken(code, token),
-}));
+// THEMA5A_REAL_INFRA=1: echte Module (PostgreSQL/Redis in Docker), sonst In-Memory-Ersatz.
+vi.mock('../../db', async (importOriginal) =>
+  env.real
+    ? importOriginal()
+    : {
+        prisma: new Proxy(
+          {},
+          { get: (_target, key) => (env.db!.prisma as Record<string | symbol, unknown>)[key] },
+        ),
+      },
+);
+vi.mock('../../redis', async (importOriginal) =>
+  env.real ? importOriginal() : { getRedis: () => env.redis! },
+);
+vi.mock('../../lib/hostPairing', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../../lib/hostPairing')>();
+  if (env.real) return actual;
+  return {
+    ...actual,
+    findPairedHostByToken: (code: string, token: string) =>
+      env.pairing!.findPairedHostByToken(code, token),
+  };
+});
 vi.mock('../../lib/hostAuth', async (importOriginal) => {
   const actual = await importOriginal<typeof import('../../lib/hostAuth')>();
   return {
@@ -149,13 +155,12 @@ async function read(token: string | null) {
   }
 }
 
-function resetWorld(variant: 'BASELINE' | 'V1' | 'V2') {
-  env.db = createFakeDb();
-  env.redis = createFakeRedis();
-  env.pairing = createPairingRegistry();
+const world = createWorld(env);
+
+async function resetWorld(variant: 'BASELINE' | 'V1' | 'V2') {
   env.variant = variant;
   env.decisionCache.clear();
-  env.db.addSession(baseSession(SESSION));
+  await world.reset([baseSession(SESSION)]);
   proxyLog.length = 0;
   onCompletionRequest = null;
   resetOpenWeightLlmClientForTests();
@@ -285,7 +290,7 @@ describe.skipIf(!RUN)('Thema 5A / T2-real – Rechteentzug bei echter privater R
 
   it('R0 unberechtigte Aufträge erreichen die Runtime nicht (0 Requests)', async () => {
     stubRuntimeEnv();
-    resetWorld('BASELINE');
+    await resetWorld('BASELINE');
     const foreign = 'f'.repeat(43);
     currentHostTokens = [foreign];
     const outcomes: string[] = [];
@@ -309,24 +314,25 @@ describe.skipIf(!RUN)('Thema 5A / T2-real – Rechteentzug bei echter privater R
     expect(proxyLog).toHaveLength(0);
   });
 
+  type Tokens = { starter: string; legit: string | null; device?: PairedDevice };
   const scenarios = [
     {
       id: 'S1',
       label: 'Credential-Rotation während der Inferenz',
-      setup: async () => ({
+      setup: async (): Promise<Tokens> => ({
         starter: await issueHostToken(SESSION.code, 1),
-        legit: null as string | null,
+        legit: null,
       }),
-      revoke: () => void env.db!.rotateCredential(SESSION.code),
+      revoke: (_tokens: Tokens) => world.rotateCredential(SESSION.code),
     },
     {
       id: 'S2',
       label: 'Paired Host wird während der Inferenz entkoppelt',
-      setup: async () => {
-        env.pairing!.add('paired-real-5a-s2', SESSION.code, 'device-real');
-        return { starter: 'paired-real-5a-s2', legit: await issueHostToken(SESSION.code, 1) };
+      setup: async (): Promise<Tokens> => {
+        const device = await world.pairDevice(SESSION, 'real-s2');
+        return { starter: device.token, legit: await issueHostToken(SESSION.code, 1), device };
       },
-      revoke: () => env.pairing!.revoke('paired-real-5a-s2'),
+      revoke: (tokens: Tokens) => world.revokePaired(SESSION, tokens.device!),
     },
   ];
 
@@ -335,19 +341,21 @@ describe.skipIf(!RUN)('Thema 5A / T2-real – Rechteentzug bei echter privater R
       it(`${scenario.id} ${variant} (echte Runtime): ${scenario.label}`, async () => {
         await waitForIdleSlot();
         stubRuntimeEnv();
-        resetWorld(variant);
+        await resetWorld(variant);
         const tokens = await scenario.setup();
         currentHostTokens = [tokens.starter, tokens.legit ?? ''];
         let revokedAt: number | null = null;
+        let revocation: Promise<unknown> = Promise.resolve();
         onCompletionRequest = () => {
           revokedAt = Date.now();
-          scenario.revoke();
+          revocation = Promise.resolve(scenario.revoke(tokens));
         };
         const startedAt = Date.now();
         await qaRouter
           .createCaller(ctx(tokens.starter))
           .requestSummary({ sessionId: SESSION.id, locale: 'de' });
         await waitForQaSummaryIdleForTests(60_000);
+        await revocation;
         const finishedAt = Date.now();
         const state = getQaSummaryRuntime(SESSION.id).result;
         const revokedRead = await read(tokens.starter);

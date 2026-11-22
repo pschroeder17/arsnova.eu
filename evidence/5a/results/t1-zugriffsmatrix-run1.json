@@ -1,7 +1,12 @@
 {
   "name": "t1-zugriffsmatrix",
   "runId": "1",
-  "recordedAt": "2026-11-21T16:03:38.261Z",
+  "recordedAt": "2026-11-22T00:33:31.766Z",
+  "infra": {
+    "database": "In-Memory-Ersatz",
+    "redis": "In-Memory-Ersatz",
+    "pairing": "Registry-Ersatz"
+  },
   "data": [
     {
       "actor": "A0 kein Token",

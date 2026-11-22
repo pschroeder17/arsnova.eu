@@ -1,7 +1,12 @@
 {
   "name": "t2-rechteentzug-stub",
   "runId": "2",
-  "recordedAt": "2026-11-21T16:06:41.466Z",
+  "recordedAt": "2026-11-22T00:33:36.404Z",
+  "infra": {
+    "database": "In-Memory-Ersatz",
+    "redis": "In-Memory-Ersatz",
+    "pairing": "Registry-Ersatz"
+  },
   "data": [
     {
       "scenario": "S1 Credential-Rotation (z. B. Verdacht auf Tokenabfluss) während der Inferenz",

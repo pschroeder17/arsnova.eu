@@ -1,7 +1,12 @@
 {
   "name": "t3-freigabe-ausgabepunkt",
   "runId": "3",
-  "recordedAt": "2026-11-21T16:09:47.689Z",
+  "recordedAt": "2026-11-22T00:33:42.328Z",
+  "infra": {
+    "database": "In-Memory-Ersatz",
+    "redis": "In-Memory-Ersatz",
+    "pairing": "Registry-Ersatz"
+  },
   "data": [
     {
       "state": "F1 Kanal offen (Referenz)",

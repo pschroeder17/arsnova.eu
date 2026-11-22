@@ -17,34 +17,40 @@ import {
   QaSummaryExecutionV2Schema,
 } from '@arsnova/shared-types';
 import { TRPCError } from '@trpc/server';
-import {
-  baseSession,
-  createFakeDb,
-  createFakeRedis,
-  createPairingRegistry,
-  outcomeOf,
-  writeEvidence,
-} from './fakes';
+import { baseSession, outcomeOf, writeEvidence } from './fakes';
+import { createWorld, type PairedDevice } from './world';
 
 const env = vi.hoisted(() => ({
+  real: process.env['THEMA5A_REAL_INFRA'] === '1',
   db: null as ReturnType<typeof import('./fakes').createFakeDb> | null,
   redis: null as ReturnType<typeof import('./fakes').createFakeRedis> | null,
   pairing: null as ReturnType<typeof import('./fakes').createPairingRegistry> | null,
   serviceCalls: 0,
 }));
 
-vi.mock('../../db', () => ({
-  prisma: new Proxy(
-    {},
-    { get: (_target, key) => (env.db!.prisma as Record<string | symbol, unknown>)[key] },
-  ),
-}));
-vi.mock('../../redis', () => ({ getRedis: () => env.redis! }));
-vi.mock('../../lib/hostPairing', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('../../lib/hostPairing')>()),
-  findPairedHostByToken: (code: string, token: string) =>
-    env.pairing!.findPairedHostByToken(code, token),
-}));
+// THEMA5A_REAL_INFRA=1: echte Module (PostgreSQL/Redis in Docker), sonst In-Memory-Ersatz.
+vi.mock('../../db', async (importOriginal) =>
+  env.real
+    ? importOriginal()
+    : {
+        prisma: new Proxy(
+          {},
+          { get: (_target, key) => (env.db!.prisma as Record<string | symbol, unknown>)[key] },
+        ),
+      },
+);
+vi.mock('../../redis', async (importOriginal) =>
+  env.real ? importOriginal() : { getRedis: () => env.redis! },
+);
+vi.mock('../../lib/hostPairing', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('../../lib/hostPairing')>();
+  if (env.real) return actual;
+  return {
+    ...actual,
+    findPairedHostByToken: (code: string, token: string) =>
+      env.pairing!.findPairedHostByToken(code, token),
+  };
+});
 vi.mock('../../lib/sessionLearningObjectives', async (importOriginal) => {
   const sentinel = () => {
     env.serviceCalls += 1;
@@ -105,8 +111,11 @@ type Actor = {
   token: () => Promise<string | null>;
   expectGranted: boolean;
   /** optional: Zustand nach Tokenausgabe verändern (Rotation, Widerruf, Zeit). */
-  after?: () => void;
+  after?: () => unknown;
 };
+
+const world = createWorld(env);
+const devices = new Map<string, PairedDevice>();
 
 const records: Array<{
   actor: string;
@@ -121,13 +130,10 @@ async function issueHostToken(code: string, version = 1) {
     .token;
 }
 
-function resetWorld() {
-  env.db = createFakeDb();
-  env.redis = createFakeRedis();
-  env.pairing = createPairingRegistry();
+async function resetWorld() {
   env.serviceCalls = 0;
-  env.db.addSession(baseSession(SESSION_A));
-  env.db.addSession(baseSession(SESSION_B));
+  devices.clear();
+  await world.reset([baseSession(SESSION_A), baseSession(SESSION_B)]);
   processorCalls = 0;
   resetQaSummaryQueueForTests({
     // Ersatz nur für den Analysekontext; die Autorisierung ist der echte N5-Pfad.
@@ -176,7 +182,7 @@ const actors: Actor[] = [
     id: 'A3',
     label: 'Host-Token nach Credential-Rotation',
     token: () => issueHostToken(SESSION_A.code),
-    after: () => env.db!.rotateCredential(SESSION_A.code),
+    after: () => world.rotateCredential(SESSION_A.code),
     expectGranted: false,
   },
   {
@@ -193,19 +199,17 @@ const actors: Actor[] = [
     id: 'A5',
     label: 'widerrufener Paired Host',
     token: async () => {
-      env.pairing!.add('paired-token-widerrufen-5a', SESSION_A.code, 'device-1');
-      return 'paired-token-widerrufen-5a';
+      const device = await world.pairDevice(SESSION_A, 'widerrufen');
+      devices.set('A5', device);
+      return device.token;
     },
-    after: () => env.pairing!.revoke('paired-token-widerrufen-5a'),
+    after: () => world.revokePaired(SESSION_A, devices.get('A5')!),
     expectGranted: false,
   },
   {
     id: 'A6',
     label: 'aktiver Paired Host',
-    token: async () => {
-      env.pairing!.add('paired-token-aktiv-5a', SESSION_A.code, 'device-2');
-      return 'paired-token-aktiv-5a';
-    },
+    token: async () => (await world.pairDevice(SESSION_A, 'aktiv')).token,
     expectGranted: true,
   },
   {
@@ -256,11 +260,11 @@ const procedures: Array<{
 ];
 
 describe('Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)', () => {
-  beforeEach(() => {
+  beforeEach(async () => {
     vi.useRealTimers();
     vi.unstubAllEnvs();
     vi.stubEnv('QA_SUMMARY_ENABLED', 'true');
-    resetWorld();
+    await resetWorld();
   });
 
   afterAll(() => {
@@ -272,7 +276,7 @@ describe('Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)', () => {
     for (const procedure of procedures) {
       it(`${actor.id} ${actor.label} → ${procedure.name}`, async () => {
         const token = await actor.token();
-        actor.after?.();
+        await actor.after?.();
         let outcome = 'OK';
         try {
           await procedure.call(token);
@@ -303,9 +307,10 @@ describe('Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)', () => {
 
   it('Z1 Original-Host, Session beendet, im Nachbereitungsfenster', async () => {
     const token = await issueHostToken(SESSION_A.code);
-    const session = env.db!.sessions.get(SESSION_A.id)!;
-    session.status = 'FINISHED';
-    session.endedAt = new Date(Date.now() - 60 * 60 * 1000);
+    await world.updateSession(SESSION_A.id, {
+      status: 'FINISHED',
+      endedAt: new Date(Date.now() - 60 * 60 * 1000),
+    });
     for (const procedure of procedures.slice(0, 3)) {
       let outcome = 'OK';
       try {
@@ -330,10 +335,11 @@ describe('Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)', () => {
 
   it('Z1b Original-Host, Session beendet und Q&A-Kanal geschlossen', async () => {
     const token = await issueHostToken(SESSION_A.code);
-    const session = env.db!.sessions.get(SESSION_A.id)!;
-    session.status = 'FINISHED';
-    session.endedAt = new Date(Date.now() - 60 * 60 * 1000);
-    session.qaOpen = false;
+    await world.updateSession(SESSION_A.id, {
+      status: 'FINISHED',
+      endedAt: new Date(Date.now() - 60 * 60 * 1000),
+      qaOpen: false,
+    });
     for (const procedure of procedures.slice(0, 3)) {
       let outcome = 'OK';
       try {
@@ -357,25 +363,29 @@ describe('Thema 5A / T1 – Zugriffsmatrix (echte Host-Autorisierung)', () => {
 
   it('Z2 Original-Host mit noch lebendem Token, Nachbereitungsfenster abgelaufen', async () => {
     const token = await issueHostToken(SESSION_A.code);
-    const session = env.db!.sessions.get(SESSION_A.id)!;
-    session.status = 'FINISHED';
-    session.endedAt = new Date(Date.now() - 15 * 24 * 60 * 60 * 1000);
-    session.expiresAt = session.endedAt;
-    for (const procedure of procedures.slice(0, 3)) {
-      let outcome = 'OK';
-      try {
-        await procedure.call(token);
-      } catch (error) {
-        outcome = outcomeOf(error);
+    await world.expirePostProcessingWindow(SESSION_A.id);
+    try {
+      for (const procedure of procedures.slice(0, 3)) {
+        let outcome = 'OK';
+        try {
+          await procedure.call(token);
+        } catch (error) {
+          outcome = outcomeOf(error);
+        }
+        records.push({
+          actor: 'Z2 Original-Host, Nachbereitungsfenster abgelaufen',
+          procedure: procedure.name,
+          outcome,
+          granted: outcome !== 'UNAUTHORIZED' && outcome !== 'FORBIDDEN',
+          processorCalls,
+        });
+        // In-Memory (rückdatiert): Token gilt noch, Fristprüfung → FORBIDDEN.
+        // Echte DB (Uhr vorgestellt): Token-Laufzeit ist an das Fristende gekappt → UNAUTHORIZED.
+        expect(['FORBIDDEN', 'UNAUTHORIZED']).toContain(outcome);
+        if (world.mode === 'fake') expect(outcome).toBe('FORBIDDEN');
       }
-      records.push({
-        actor: 'Z2 Original-Host, Nachbereitungsfenster abgelaufen',
-        procedure: procedure.name,
-        outcome,
-        granted: outcome !== 'UNAUTHORIZED' && outcome !== 'FORBIDDEN',
-        processorCalls,
-      });
-      expect(outcome).toBe('FORBIDDEN');
+    } finally {
+      vi.useRealTimers();
     }
     expect(processorCalls).toBe(0);
   });

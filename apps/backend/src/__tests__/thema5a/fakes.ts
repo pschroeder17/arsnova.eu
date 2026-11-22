@@ -234,11 +234,21 @@ const repoRoot = resolve(process.cwd(), '../..');
 /** Schreibt Rohdaten nach evidence/5a/results/<name>-<RUN_ID>.json. */
 export function writeEvidence(name: string, data: unknown): string {
   const runId = process.env['THEMA5A_RUN_ID'] ?? 'local';
-  const file = resolve(repoRoot, 'evidence/5a/results', `${name}-run${runId}.json`);
+  const realInfra = process.env['THEMA5A_REAL_INFRA'] === '1';
+  // Echte Infrastruktur (PostgreSQL/Redis in Docker) bekommt eigene Dateien.
+  const fileName = `${name}${realInfra ? '-real-infra' : ''}-run${runId}.json`;
+  const file = resolve(repoRoot, 'evidence/5a/results', fileName);
+  const infra = realInfra
+    ? {
+        database: 'PostgreSQL 16 (Docker)',
+        redis: 'Redis 7.4 (Docker)',
+        pairing: 'lib/hostPairing.ts',
+      }
+    : { database: 'In-Memory-Ersatz', redis: 'In-Memory-Ersatz', pairing: 'Registry-Ersatz' };
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(
     file,
-    `${JSON.stringify({ name, runId, recordedAt: new Date().toISOString(), data }, null, 2)}\n`,
+    `${JSON.stringify({ name, runId, recordedAt: new Date().toISOString(), infra, data }, null, 2)}\n`,
   );
   return file;
 }

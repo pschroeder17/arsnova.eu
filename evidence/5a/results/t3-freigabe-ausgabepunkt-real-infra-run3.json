@@ -1,0 +1,82 @@
+{
+  "name": "t3-freigabe-ausgabepunkt",
+  "runId": "3",
+  "recordedAt": "2026-11-22T00:33:00.856Z",
+  "infra": {
+    "database": "PostgreSQL 16 (Docker)",
+    "redis": "Redis 7.4 (Docker)",
+    "pairing": "lib/hostPairing.ts"
+  },
+  "data": [
+    {
+      "state": "F1 Kanal offen (Referenz)",
+      "participantView": {
+        "state": "ACTIVE",
+        "questions": 6,
+        "nicknames": 6
+      },
+      "presenterViewWithoutAnyCredential": {
+        "state": "ACTIVE",
+        "questions": 6,
+        "nicknames": 6
+      },
+      "divergent": false
+    },
+    {
+      "state": "F2 Host schließt den Q&A-Kanal (qaOpen=false)",
+      "participantView": {
+        "state": "CHANNEL_CLOSED",
+        "questions": 0,
+        "nicknames": 0
+      },
+      "presenterViewWithoutAnyCredential": {
+        "state": "CHANNEL_CLOSED",
+        "questions": 6,
+        "nicknames": 6
+      },
+      "divergent": true
+    },
+    {
+      "state": "F3 Deadline abgelaufen (qaClosesAt in der Vergangenheit)",
+      "participantView": {
+        "state": "DEADLINE_EXPIRED",
+        "questions": 0,
+        "nicknames": 0
+      },
+      "presenterViewWithoutAnyCredential": {
+        "state": "DEADLINE_EXPIRED",
+        "questions": 6,
+        "nicknames": 6
+      },
+      "divergent": true
+    },
+    {
+      "state": "F4 Q&A-Kanal deaktiviert (qaEnabled=false)",
+      "participantView": {
+        "state": "CHANNEL_CLOSED",
+        "questions": 0,
+        "nicknames": 0
+      },
+      "presenterViewWithoutAnyCredential": {
+        "state": "CHANNEL_CLOSED",
+        "questions": 0,
+        "nicknames": 0
+      },
+      "divergent": false
+    },
+    {
+      "state": "F5 anonymer Modus aktiv (Kanal offen)",
+      "participantView": {
+        "state": "ACTIVE",
+        "questions": 6,
+        "nicknames": 0
+      },
+      "presenterViewWithoutAnyCredential": {
+        "state": "ACTIVE",
+        "questions": 6,
+        "nicknames": 0
+      },
+      "divergent": false
+    }
+  ]
+}
